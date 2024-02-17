@@ -1,0 +1,8 @@
+com\qa\factory\DriverFactory.class
+com\qa\util\ConfigReader.class
+com\pages\TasksPage.class
+com\pages\CompaniesPage.class
+com\pages\LoginPage.class
+com\pages\UsersPage.class
+com\pages\SettingsPage.class
+com\pages\ContactPage.class

@@ -1,0 +1,8 @@
+stepdefinitions\CompaniesSteps.class
+stepdefinitions\LoginSteps.class
+stepdefinitions\UsersSteps.class
+stepdefinitions\TasksSteps.class
+AppHooks\ApplicationHooks.class
+testrunners\TestRunner.class
+stepdefinitions\ContactSteps.class
+stepdefinitions\SettingsSteps.class

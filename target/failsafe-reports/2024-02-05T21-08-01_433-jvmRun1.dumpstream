@@ -1,0 +1,682 @@
+# Created at 2024-02-05T21:08:46.427
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readFully(DataInputStream.java:210)
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:385)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:390)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+
+# Created at 2024-02-05T21:08:49.113
+Unexpected IOException with stream:   [31mGiven [0m[31mUser has already logged in to application[0m                      [90m# stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)[0m
+    | username          | password    |
+    | admin@ontrack.com | Admin@12345 |
+      [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c4e983fbc4a2335489cd3c2871a5e889, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.57, ms:edgeOptions: {debuggerAddress: localhost:63511}, msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59..., userDataDir: C:\Users\cis\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63511/devtoo..., se:cdpVersion: 113.0.1774.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4e983fbc4a2335489cd3c2871a5e889
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:550)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(CompaniesSteps.java:29)
+	at ✽.User has already logged in to application(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:4)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:358)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(CompaniesSteps.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:388)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:590)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:182)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	... 3 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
+[0m
+
+
+# Created at 2024-02-05T21:08:49.119
+Unexpected IOException with stream:   [36mAnd [0m[36mUser is on Companies page url [0m[36m[1m"https://beta.cisin.com:4991/"[0m     [90m# stepdefinitions.CompaniesSteps.user_is_on_companies_page(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:08:49.121
+Unexpected IOException with stream:   [36mThen [0m[36m[0m[36m[1m"Users"[0m[36m link should be displayed on sidebar in the company page[0m [90m# stepdefinitions.CompaniesSteps.companies_link_should_be_displayed_on_sidebar(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:08:49.129
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c4e983fbc4a2335489cd3c2871a5e889, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.57, ms:edgeOptions: {debuggerAddress: localhost:63511}, msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59..., userDataDir: C:\Users\cis\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63511/devtoo..., se:cdpVersion: 113.0.1774.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4e983fbc4a2335489cd3c2871a5e889
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:550)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:69)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:358)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+	... 9 more
+[0m
+
+
+# Created at 2024-02-05T21:08:49.151
+Unexpected IOException with stream:       [31morg.openqa.selenium.WebDriverException: Timed out waiting for driver server to stop.
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [c4e983fbc4a2335489cd3c2871a5e889, quit {}]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.57, ms:edgeOptions: {debuggerAddress: localhost:63511}, msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59..., userDataDir: C:\Users\cis\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63511/devtoo..., se:cdpVersion: 113.0.1774.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4e983fbc4a2335489cd3c2871a5e889
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:165)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:438)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:426)
+	at AppHooks.ApplicationHooks.quitBrowser(ApplicationHooks.java:61)
+Caused by: java.util.concurrent.ExecutionException: java.io.UncheckedIOException: java.net.ConnectException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:161)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:438)
+	at org.openqa.selenium.chromium.ChromiumDriver.quit(ChromiumDriver.java:426)
+	at AppHooks.ApplicationHooks.quitBrowser(ApplicationHooks.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:358)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.lambda$execute$1(DriverCommandExecutor.java:128)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1768)
+	... 3 more
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+	... 9 more
+[0m
+
+
+# Created at 2024-02-05T21:08:49.159
+Unexpected IOException: 8,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.16.1'\002C revision: '9b4c83354e'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '21.0.1'\000ADriver info: org.openqa.selenium.edge.EdgeDriver\000ACommand: [c4e983fbc4a2335489cd3c2871a5e889\002C get [url]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: msedge\002C browserVersion: 113.0.1774.57\002C ms:edgeOptions: {debuggerAddress: localhost:63511}\002C msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59...\002C userDataDir: C:\005CUsers\005Ccis\005CAppData\005CLocal\005C...}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:63511/devtoo...\002C se:cdpVersion: 113.0.1774.57\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: c4e983fbc4a2335489cd3c2871a5e889,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.16.1'\002C revision: '9b4c83354e'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '21.0.1'\000ADriver info: org.openqa.selenium.edge.EdgeDriver\000ACommand: [c4e983fbc4a2335489cd3c2871a5e889\002C get [url]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: msedge\002C browserVersion: 113.0.1774.57\002C ms:edgeOptions: {debuggerAddress: localhost:63511}\002C msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59...\002C userDataDir: C:\005CUsers\005Ccis\005CAppData\005CLocal\005C...}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:63511/devtoo...\002C se:cdpVersion: 113.0.1774.57\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: c4e983fbc4a2335489cd3c2871a5e889,TestRunner.runScenario \00BB UnreachableBrowser Error communicating with the remot...,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.16.1'\002C revision: '9b4c83354e'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '21.0.1'\000ADriver info: org.openqa.selenium.edge.EdgeDriver\000ACommand: [c4e983fbc4a2335489cd3c2871a5e889\002C get [url]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: msedge\002C browserVersion: 113.0.1774.57\002C ms:edgeOptions: {debuggerAddress: localhost:63511}\002C msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59...\002C userDataDir: C:\005CUsers\005Ccis\005CAppData\005CLocal\005C...}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:63511/devtoo...\002C se:cdpVersion: 113.0.1774.57\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: c4e983fbc4a2335489cd3c2871a5e889\000ACaused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.net.SocketException: Connection reset\000A
+
+
+# Created at 2024-02-05T21:08:49.163
+Unexpected IOException: 5,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),cucumber,null,null
+
+
+# Created at 2024-02-05T21:08:49.223
+Unexpected IOException with stream: 
+Scenario: 6. Logout button should be displayed in the company page      [90m# src/test/resources/com/features/Companies.feature:23[0m
+
+
+# Created at 2024-02-05T21:08:49.235
+Unexpected IOException with stream: browser value is: Edge
+
+
+# Created at 2024-02-05T21:08:51.268
+Unexpected IOException with stream: Feb 05, 2024 9:08:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 113
+
+
+# Created at 2024-02-05T21:08:51.270
+Unexpected IOException with stream: Feb 05, 2024 9:08:51 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 113.0.1774.57. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+
+
+# Created at 2024-02-05T21:08:55.735
+Unexpected IOException with stream:   [31mGiven [0m[31mUser has already logged in to application[0m                       [90m# stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)[0m
+    | username          | password    |
+    | admin@ontrack.com | Admin@12345 |
+      [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [ee416c9077ef50776be133cedf0afb41, get [url]]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.57, ms:edgeOptions: {debuggerAddress: localhost:63552}, msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59..., userDataDir: C:\Users\cis\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63552/devtoo..., se:cdpVersion: 113.0.1774.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee416c9077ef50776be133cedf0afb41
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:550)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(CompaniesSteps.java:29)
+	at ✽.User has already logged in to application(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:4)
+Caused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:358)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:305)
+	at stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(CompaniesSteps.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.io.IOException: HTTP/1.1 header parser received no bytes
+	at java.net.http/jdk.internal.net.http.common.Utils.wrapWithExtraDetail(Utils.java:388)
+	at java.net.http/jdk.internal.net.http.Http1Response$HeadersReader.onReadError(Http1Response.java:590)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.checkForErrors(Http1AsyncReceiver.java:302)
+	at java.net.http/jdk.internal.net.http.Http1AsyncReceiver.flush(Http1AsyncReceiver.java:268)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$LockingRestartableTask.run(SequentialScheduler.java:182)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$CompleteRestartableTask.run(SequentialScheduler.java:149)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	... 3 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1178)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:841)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:207)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:280)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:233)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:782)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:965)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:1467)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:1412)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:1412)
+[0m
+
+
+# Created at 2024-02-05T21:08:55.740
+Unexpected IOException with stream:   [36mAnd [0m[36mUser is on Companies page url [0m[36m[1m"https://beta.cisin.com:4991/"[0m      [90m# stepdefinitions.CompaniesSteps.user_is_on_companies_page(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:08:55.742
+Unexpected IOException with stream:   [36mThen [0m[36m[0m[36m[1m"Logout"[0m[36m link should be displayed on sidebar in the company page[0m [90m# stepdefinitions.CompaniesSteps.companies_link_should_be_displayed_on_sidebar(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:08:55.750
+Unexpected IOException with stream:       [31morg.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [ee416c9077ef50776be133cedf0afb41, screenshot []]
+Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 113.0.1774.57, ms:edgeOptions: {debuggerAddress: localhost:63552}, msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59..., userDataDir: C:\Users\cis\AppData\Local\...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63552/devtoo..., se:cdpVersion: 113.0.1774.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee416c9077ef50776be133cedf0afb41
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:550)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:69)
+Caused by: java.io.UncheckedIOException: java.net.ConnectException
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute0(JdkHttpClient.java:442)
+	at org.openqa.selenium.remote.http.AddSeleniumUserAgent.lambda$apply$0(AddSeleniumUserAgent.java:42)
+	at org.openqa.selenium.remote.http.Filter.lambda$andFinally$1(Filter.java:55)
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:358)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:188)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:596)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:326)
+	at AppHooks.ApplicationHooks.tearDown(ApplicationHooks.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaHookDefinition.execute(JavaHookDefinition.java:64)
+	at io.cucumber.core.runner.CoreHookDefinition.execute(CoreHookDefinition.java:46)
+	at io.cucumber.core.runner.HookDefinitionMatch.runStep(HookDefinitionMatch.java:21)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:90)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1028)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:227)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:280)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$2(PlainHttpConnection.java:238)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1773)
+	... 3 more
+Caused by: java.nio.channels.ClosedChannelException
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:202)
+	at java.base/sun.nio.ch.SocketChannelImpl.beginConnect(SocketChannelImpl.java:786)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:874)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$1(PlainHttpConnection.java:210)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:212)
+	... 9 more
+[0m
+
+
+# Created at 2024-02-05T21:08:55.761
+Unexpected IOException: 8,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.16.1'\002C revision: '9b4c83354e'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '21.0.1'\000ADriver info: org.openqa.selenium.edge.EdgeDriver\000ACommand: [ee416c9077ef50776be133cedf0afb41\002C get [url]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: msedge\002C browserVersion: 113.0.1774.57\002C ms:edgeOptions: {debuggerAddress: localhost:63552}\002C msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59...\002C userDataDir: C:\005CUsers\005Ccis\005CAppData\005CLocal\005C...}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:63552/devtoo...\002C se:cdpVersion: 113.0.1774.57\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: ee416c9077ef50776be133cedf0afb41,null,Error communicating with the remote browser. It may have died.\000ABuild info: version: '4.16.1'\002C revision: '9b4c83354e'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '21.0.1'\000ADriver info: org.openqa.selenium.edge.EdgeDriver\000ACommand: [ee416c9077ef50776be133cedf0afb41\002C get [url]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: msedge\002C browserVersion: 113.0.1774.57\002C ms:edgeOptions: {debuggerAddress: localhost:63552}\002C msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59...\002C userDataDir: C:\005CUsers\005Ccis\005CAppData\005CLocal\005C...}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:63552/devtoo...\002C se:cdpVersion: 113.0.1774.57\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: ee416c9077ef50776be133cedf0afb41,TestRunner.runScenario \00BB UnreachableBrowser Error communicating with the remot...,org.openqa.selenium.remote.UnreachableBrowserException: \000AError communicating with the remote browser. It may have died.\000ABuild info: version: '4.16.1'\002C revision: '9b4c83354e'\000ASystem info: os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '21.0.1'\000ADriver info: org.openqa.selenium.edge.EdgeDriver\000ACommand: [ee416c9077ef50776be133cedf0afb41\002C get [url]]\000ACapabilities {acceptInsecureCerts: false\002C browserName: msedge\002C browserVersion: 113.0.1774.57\002C ms:edgeOptions: {debuggerAddress: localhost:63552}\002C msedge: {msedgedriverVersion: 113.0.1774.57 (b3b212deff59...\002C userDataDir: C:\005CUsers\005Ccis\005CAppData\005CLocal\005C...}\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platformName: windows\002C proxy: Proxy()\002C se:cdp: ws://localhost:63552/devtoo...\002C se:cdpVersion: 113.0.1774.57\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:extension:minPinLength: true\002C webauthn:extension:prf: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: ee416c9077ef50776be133cedf0afb41\000ACaused by: java.io.UncheckedIOException: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.io.IOException: HTTP/1.1 header parser received no bytes\000ACaused by: java.net.SocketException: Connection reset\000A
+
+
+# Created at 2024-02-05T21:08:55.761
+Unexpected IOException: 5,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),cucumber,null,null
+
+
+# Created at 2024-02-05T21:08:55.780
+Unexpected IOException with stream: 
+Scenario: 7. Setting link should be displayed in the company page      [90m# src/test/resources/com/features/Companies.feature:26[0m
+
+
+# Created at 2024-02-05T21:08:55.782
+Unexpected IOException with stream: browser value is: Edge
+
+
+# Created at 2024-02-05T21:08:57.107
+Unexpected IOException with stream: Feb 05, 2024 9:08:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 113
+
+
+# Created at 2024-02-05T21:08:57.109
+Unexpected IOException with stream: Feb 05, 2024 9:08:57 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 113.0.1774.57. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+
+
+# Created at 2024-02-05T21:09:01.335
+Unexpected IOException with stream:   [32mGiven [0m[32mUser has already logged in to application[0m                      [90m# stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)[0m
+    | username          | password    |
+    | admin@ontrack.com | Admin@12345 |
+
+
+# Created at 2024-02-05T21:09:02.371
+Unexpected IOException with stream: https://beta.cisin.com:4991/
+
+# Created at 2024-02-05T21:09:03.377
+Unexpected IOException with stream:   [32mAnd [0m[32mUser is on Companies page url [0m[32m[1m"https://beta.cisin.com:4991/"[0m     [90m# stepdefinitions.CompaniesSteps.user_is_on_companies_page(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:09:03.443
+Unexpected IOException with stream:   [32mThen [0m[32msetting link should be displayed on sidebar in the company page[0m [90m# stepdefinitions.CompaniesSteps.setting_link_should_be_displayed_on_sidebar()[0m
+
+
+# Created at 2024-02-05T21:09:03.668
+Unexpected IOException: 6,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),null,null,null
+
+
+# Created at 2024-02-05T21:09:03.669
+Unexpected IOException: 5,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),cucumber,null,null
+
+
+# Created at 2024-02-05T21:09:03.700
+Unexpected IOException with stream: 
+Scenario: 8. Profile link should be displayed in the company page      [90m# src/test/resources/com/features/Companies.feature:29[0m
+
+
+# Created at 2024-02-05T21:09:03.702
+Unexpected IOException with stream: browser value is: Edge
+
+
+# Created at 2024-02-05T21:09:05.117
+Unexpected IOException with stream: Feb 05, 2024 9:09:05 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 113
+
+
+# Created at 2024-02-05T21:09:05.119
+Unexpected IOException with stream: Feb 05, 2024 9:09:05 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 113.0.1774.57. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+
+
+# Created at 2024-02-05T21:09:10.618
+Unexpected IOException with stream:   [32mGiven [0m[32mUser has already logged in to application[0m                      [90m# stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)[0m
+    | username          | password    |
+    | admin@ontrack.com | Admin@12345 |
+
+
+# Created at 2024-02-05T21:09:11.636
+Unexpected IOException with stream: https://beta.cisin.com:4991/users/sign_in
+
+# Created at 2024-02-05T21:09:12.652
+Unexpected IOException with stream:   [31mAnd [0m[31mUser is on Companies page url [0m[31m[1m"https://beta.cisin.com:4991/"[0m     [90m# stepdefinitions.CompaniesSteps.user_is_on_companies_page(java.lang.String)[0m
+      [31mjava.lang.AssertionError: expected [https://beta.cisin.com:4991/] but found [https://beta.cisin.com:4991/users/sign_in]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at stepdefinitions.CompaniesSteps.user_is_on_companies_page(CompaniesSteps.java:39)
+	at ✽.User is on Companies page url "https://beta.cisin.com:4991/"(file:///E:/Rahul%20Bhalla%20CIS/OntrackProjectBDD/OnTrack_BDD/src/test/resources/com/features/Companies.feature:7)
+[0m
+
+
+# Created at 2024-02-05T21:09:12.653
+Unexpected IOException with stream:   [36mThen [0m[36mprofile icon should be displayed on sidebar in the company page[0m [90m# stepdefinitions.CompaniesSteps.profile_icon_should_be_displayed_on_sidebar()[0m
+
+
+# Created at 2024-02-05T21:09:13.210
+Unexpected IOException with stream: 
+    Embedding 8._Profile_link_should_be_displayed_in_the_company_page [image/png 57327 bytes]
+
+
+
+# Created at 2024-02-05T21:09:13.438
+Unexpected IOException: 8,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),null,expected [https://beta.cisin.com:4991/] but found [https://beta.cisin.com:4991/users/sign_in],null,expected [https://beta.cisin.com:4991/] but found [https://beta.cisin.com:4991/users/sign_in],TestRunner.runScenario expected [https://beta.cisin.com:4991/] but found [https://beta.cisin.com:4991/users/sign_in],java.lang.AssertionError: expected [https://beta.cisin.com:4991/] but found [https://beta.cisin.com:4991/users/sign_in]\000A
+
+
+# Created at 2024-02-05T21:09:13.439
+Unexpected IOException: 5,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),cucumber,null,null
+
+
+# Created at 2024-02-05T21:09:13.465
+Unexpected IOException with stream: 
+Scenario: 9. Comapnies tab should be displayed in the company page [90m# src/test/resources/com/features/Companies.feature:32[0m
+
+
+# Created at 2024-02-05T21:09:13.467
+Unexpected IOException with stream: browser value is: Edge
+
+
+# Created at 2024-02-05T21:09:14.961
+Unexpected IOException with stream: Feb 05, 2024 9:09:14 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 113
+
+
+# Created at 2024-02-05T21:09:14.963
+Unexpected IOException with stream: Feb 05, 2024 9:09:14 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 113.0.1774.57. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+
+
+# Created at 2024-02-05T21:09:18.458
+Unexpected IOException with stream:   [32mGiven [0m[32mUser has already logged in to application[0m                  [90m# stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)[0m
+    | username          | password    |
+    | admin@ontrack.com | Admin@12345 |
+
+
+# Created at 2024-02-05T21:09:19.494
+Unexpected IOException with stream: https://beta.cisin.com:4991/
+
+# Created at 2024-02-05T21:09:20.508
+Unexpected IOException with stream:   [32mAnd [0m[32mUser is on Companies page url [0m[32m[1m"https://beta.cisin.com:4991/"[0m [90m# stepdefinitions.CompaniesSteps.user_is_on_companies_page(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:09:20.553
+Unexpected IOException with stream:   [32mThen [0m[32m[0m[32m[1m"companies"[0m[32m tab should be displayed in the company page[0m     [90m# stepdefinitions.CompaniesSteps.tab_should_be_displayed(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:09:20.768
+Unexpected IOException: 6,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),null,null,null
+
+
+# Created at 2024-02-05T21:09:20.771
+Unexpected IOException: 5,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),cucumber,null,null
+
+
+# Created at 2024-02-05T21:09:20.796
+Unexpected IOException with stream: 
+Scenario: 10. Contact tab should be displayed in the company page  [90m# src/test/resources/com/features/Companies.feature:35[0m
+
+
+# Created at 2024-02-05T21:09:20.799
+Unexpected IOException with stream: browser value is: Edge
+
+
+# Created at 2024-02-05T21:09:22.075
+Unexpected IOException with stream: Feb 05, 2024 9:09:22 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 113
+
+
+# Created at 2024-02-05T21:09:22.077
+Unexpected IOException with stream: Feb 05, 2024 9:09:22 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 113.0.1774.57. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+
+
+# Created at 2024-02-05T21:09:27.482
+Unexpected IOException with stream:   [32mGiven [0m[32mUser has already logged in to application[0m                  [90m# stepdefinitions.CompaniesSteps.user_has_already_logged_in_to_application(io.cucumber.datatable.DataTable)[0m
+    | username          | password    |
+    | admin@ontrack.com | Admin@12345 |
+
+
+# Created at 2024-02-05T21:09:28.512
+Unexpected IOException with stream: https://beta.cisin.com:4991/
+
+# Created at 2024-02-05T21:09:29.515
+Unexpected IOException with stream:   [32mAnd [0m[32mUser is on Companies page url [0m[32m[1m"https://beta.cisin.com:4991/"[0m [90m# stepdefinitions.CompaniesSteps.user_is_on_companies_page(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:09:29.550
+Unexpected IOException with stream:   [32mThen [0m[32m[0m[32m[1m"contact"[0m[32m tab should be displayed in the company page[0m       [90m# stepdefinitions.CompaniesSteps.tab_should_be_displayed(java.lang.String)[0m
+
+
+# Created at 2024-02-05T21:09:29.721
+Unexpected IOException: 6,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),null,null,null
+
+
+# Created at 2024-02-05T21:09:29.721
+Unexpected IOException: 5,1,testrunners.TestRunner,runScenario(testrunners.TestRunner),cucumber,null,null
+
+
+# Created at 2024-02-05T21:09:29.742
+Unexpected IOException with stream: 
+Scenario: 11. SearchBox should be displayed in the company page    [90m# src/test/resources/com/features/Companies.feature:38[0m
+
+
+# Created at 2024-02-05T21:09:29.743
+Unexpected IOException with stream: browser value is: Edge
+
+
+# Created at 2024-02-05T21:09:31.065
+Unexpected IOException with stream: Feb 05, 2024 9:09:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 113
+
+
+# Created at 2024-02-05T21:09:31.066
+Unexpected IOException with stream: Feb 05, 2024 9:09:31 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 113.0.1774.57. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+
+
